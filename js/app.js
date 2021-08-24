@@ -20,11 +20,7 @@
 const navBar = document.querySelector(".main-nav-items");
 const navElements = document.querySelectorAll("section");
 
-// navBar.addEventListener("click", function (event) {
-//   event.preventDefault();
-//   navBar.querySelector(".main-nav-link")?.classList.remove("main-nav-link");
-//   event.target.classList.add("main-nav-link");
-// });
+// Dynamic Navigation Menu //
 
 navElements.forEach(function (section) {
   const navlistElement = `<li><a class='main-nav-link' data-link=${section.id} href="#${section.id}">${section.dataset.nav}</li>`;
