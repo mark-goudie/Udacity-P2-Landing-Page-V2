@@ -27,15 +27,16 @@
         />
       </a>
       <nav class="main-nav">
-        <ul class="main-nav-items">
-          <li><a class="main-nav-link" href="#">Home</a></li>
+        <!-- Navigation starts as empty UL that will be populated with JS -->
+        <ul class="main-nav-items" id="main-nav-items">
+          <!-- <li><a class="main-nav-link" href="#">Home</a></li>
           <li><a class="main-nav-link" href="#articles">Articles</a></li>
           <li><a class="main-nav-link" href="#gallery">Gallery</a></li>
           <li>
             <a class="main-nav-link nav-class nav-last" href="#subscribe"
               >Subscribe</a
             >
-          </li>
+          </li> -->
         </ul>
       </nav>
 
@@ -45,7 +46,7 @@
       </button>
     </header>
     <main>
-      <section class="section-hero" id="home">
+      <section class="section-hero" id="home" data-nav="Home">
         <div class="hero">
           <div class="hero-text-box">
             <h1 class="heading-primary">
@@ -71,7 +72,7 @@
         </div>
       </section>
 
-      <section id="articles">
+      <section id="articles" data-nav="Articles">
         <div class="subheading">
           <div class="h1-articles">Articles</div>
           <div class="h2-articles">
@@ -146,7 +147,7 @@
         </div>
       </section>
 
-      <section id="gallery">
+      <section id="gallery" data-nav="Gallery">
         <div class="container-img-gallery">
           <div class="subheading-gallery">
             <div class="h1-articles">Gallery</div>
@@ -203,7 +204,7 @@
         </div>
       </section>
 
-      <section class="section-cta" id="subscribe">
+      <section class="section-cta" id="subscribe" data-nav="Subscribe">
         <div class="container cta">
           <div class="cta-text-box">
             <h2 class="heading-secondary">Subscribe to receive updates!</h2>

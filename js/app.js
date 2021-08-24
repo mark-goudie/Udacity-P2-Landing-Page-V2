@@ -11,32 +11,27 @@
  *
  * JS Standard: ESlint
  *
- */
-/**
- * Define Global Variables
  *
- */
-const navList = document.getElementById("nav_list");
-const sections = document.querySelectorAll("section");
-/**
- * End Global Variables
- * Start Helper Functions
- *
+ * 
+
+ * Define Global Variable
  */
 
-/**
- * End Helper Functions
- * Begin Main Functions
- *
- */
+const navBar = document.querySelector(".main-nav-items");
+const navElements = document.querySelectorAll("section");
 
-// build the nav
+// navBar.addEventListener("click", function (event) {
+//   event.preventDefault();
+//   navBar.querySelector(".main-nav-link")?.classList.remove("main-nav-link");
+//   event.target.classList.add("main-nav-link");
+// });
 
-// Add class 'active' to section when near top of viewport
+navElements.forEach(function (section) {
+  const navlistElement = `<li><a class='main-nav-link' data-link=${section.id} href="#${section.id}">${section.dataset.nav}</li>`;
+  navBar.insertAdjacentHTML("beforeend", navlistElement);
+});
 
-// Scroll to anchor ID using scrollTO event
-
-// Smooth scrolling animation
+// Smooth scrolling animation //
 
 const allLinks = document.querySelectorAll("a:link");
 
@@ -45,7 +40,7 @@ allLinks.forEach(function (link) {
     e.preventDefault();
     const href = link.getAttribute("href");
 
-    // Scroll back to top
+    // Scroll to anchor ID using scrollTO event //
 
     if (href === "#")
       window.scrollTo({
@@ -53,21 +48,21 @@ allLinks.forEach(function (link) {
         behavior: "smooth",
       });
 
-    // Scroll to other links
+    // Scroll to other links //
 
     if (href !== "#" && href.startsWith("#")) {
       const sectionEl = document.querySelector(href);
       sectionEl.scrollIntoView({ behavior: "smooth" });
     }
 
-    // Close mobile naviagtion
+    // Close mobile navigation //
 
     if (link.classList.contains("main-nav-link"))
       headerEl.classList.toggle("nav-open");
   });
 });
 
-// Make mobile navigation work
+// Active Mobile navigation //
 
 const btnNavEl = document.querySelector(".btn-mobile-nav");
 const headerEl = document.querySelector(".header");
@@ -93,8 +88,8 @@ const obs = new IntersectionObserver(
       document.body.classList.remove("sticky");
     }
   },
+
   {
-    // In the viewport
     root: null,
     threshold: 0,
     rootMargin: "-80px",
