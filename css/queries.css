@@ -1,0 +1,301 @@
+/* MEDIA QUIRIES */
+/* 1 em = 16px */
+
+/* Breakpoint 1344px */
+
+@media (max-width: 84em) {
+  .hero {
+    max-width: 120rem;
+  }
+}
+
+/* Breakpoint 1200px */
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+    /* Relative adjustment to 9px */
+  }
+
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+
+  .hero {
+    gap: 4.6rem;
+  }
+}
+
+/* Breakpoint 976px */
+
+@media (max-width: 61em) {
+  html {
+    font-size: 50%;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    width: 80%;
+    text-align: center;
+  }
+
+  .hero-img {
+    width: 90%;
+  }
+
+  .heading-primary {
+    font-size: 4.6rem;
+  }
+
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+
+  .hero-description {
+    font-size: 2rem;
+  }
+
+  .h1-articles {
+    font-size: 4.6rem;
+  }
+
+  .headings {
+    font-size: 2.4rem;
+    padding: 2rem 2.4rem;
+  }
+
+  .blurb {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    padding: 0 1.6rem 1.8rem 1.6rem;
+  }
+
+  .section-cta {
+    padding: 2rem;
+  }
+
+  .main-nav-items {
+    gap: 2.4rem;
+  }
+
+  .main-nav-link {
+    font-size: 1.4rem;
+  }
+
+  /* .cta-form {
+  grid-template-columns: 1fr; */
+
+  /* Mobile Nav */
+  .btn-mobile-nav {
+    display: block;
+  }
+
+  .main-nav {
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    /* Hide Nav */
+
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0%);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-items {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .nav-last {
+    margin-right: 0;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+
+  /* Breakpoint 768px */
+
+  @media (max-width: 48em) {
+    .cta-form {
+      grid-template-columns: 1fr;
+    }
+
+    .grid--3-cols,
+    .grid--4-cols,
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-container {
+      order: 1;
+    }
+
+    .resources-container {
+      order: 2;
+    }
+
+    .social-container {
+      order: 3;
+    }
+
+    .logo-col {
+      order: 4;
+      display: none;
+    }
+  }
+
+  /* Breakpoint 560px */
+  @media (max-width: 35em) {
+    /* Index page */
+
+    .grid--2-cols,
+    .grid--3-cols,
+    .grid--4-cols,
+    .gallery {
+      grid-template-columns: 1fr;
+    }
+
+    .grid {
+      row-gap: 4.8rem;
+    }
+
+    .hero {
+      padding: 0;
+    }
+
+    .section-hero {
+      padding: 2.4rem 0 6.4rem 0;
+    }
+
+    .heading-primary {
+      font-size: 4.2rem;
+    }
+
+    .heading-secondary {
+      font-size: 3.2rem;
+    }
+
+    .hero-description {
+      font-size: 1.8rem;
+    }
+
+    .h1-articles {
+      font-size: 4.2rem;
+    }
+
+    .h2-articles {
+      font-size: 1.6rem;
+      padding: 1.6rem;
+    }
+
+    .section-cta {
+      margin: 2.4rem;
+    }
+
+    .cta-text-box {
+      padding: 1.2rem 2.4rem 1.2rem 0rem;
+    }
+
+    .container {
+      padding: 1.8rem;
+    }
+
+    /* Blog Post */
+
+    .heading-primary {
+      font-size: 3.6rem;
+    }
+
+    .heading-secondary {
+      font-size: 2.4rem;
+    }
+
+    .article {
+      padding: 1.8rem 0;
+    }
+
+    .articles {
+      font-size: 5rem;
+      padding: 5rem 6rem;
+      background-color: #fff;
+    }
+
+    .article-text-box {
+      padding: 4.8rem 4.8rem 2.4rem 4.8rem;
+    }
+
+    .heading-h3 {
+      margin-bottom: 3.2rem;
+      font-size: 1.8rem;
+    }
+
+    .article-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      max-width: 130rem;
+      display: grid;
+      margin: 0 auto;
+      padding: 0;
+      align-items: top;
+      justify-content: left;
+      gap: 4.8rem;
+    }
+
+    .main-text {
+      width: 100%;
+      font-size: 1.8rem;
+      line-height: 1.5;
+    }
+
+    .side-blurb {
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+
+    .container-img {
+      display: flex;
+      flex-direction: column;
+      padding: 0 4.8rem;
+    }
+
+    .container-img-gallery {
+      padding: 4.2rem 6rem;
+    }
+
+    .gallery {
+      row-gap: 4.8rem;
+    }
+  }
+}
