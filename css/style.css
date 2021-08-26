@@ -400,3 +400,7 @@ Default:1
   display: flex;
   gap: 2.4rem;
 }
+
+.inview .h1-articles {
+  color: #d27368;
+}

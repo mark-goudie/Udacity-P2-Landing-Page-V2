@@ -7,7 +7,7 @@
 
 3. Build the nav menu - Dynamic js required.
 
-# 4. Distinguish the section in view: (use classLise methods)
+4. Distinguish the section in view: (use classLise methods)
 
 5. Smooth scrolling: Done
 6. Refractor: Run through eslinter
@@ -16,6 +16,6 @@
 
 8. Test performance.
 
-# 9. Add an active state to nav items.
+9. Add an active state to nav items.
 
 10. Read suggestions

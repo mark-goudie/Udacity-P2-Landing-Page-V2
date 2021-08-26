@@ -92,3 +92,41 @@ const obs = new IntersectionObserver(
   }
 );
 obs.observe(sectionHeroEl);
+
+// Active Viewport //
+
+// Highlight Articles Heading (Scrolling Inview) //
+
+const articlesEl = document.querySelector(".container-img-gallery");
+
+const obs1 = new IntersectionObserver(function (entries) {
+  const ent = entries[0];
+  console.log(ent);
+
+  if (ent.isIntersecting === false) {
+    document.body.classList.add("inview");
+  }
+
+  if (ent.isIntersecting === true) {
+    document.body.classList.remove("inview");
+  }
+});
+obs1.observe(articlesEl);
+
+// Highlight Gallery Heading (Scrolling Inview) //
+
+const galleryEl = document.querySelector(".section-hero");
+
+const obs2 = new IntersectionObserver(function (entries) {
+  const ent = entries[0];
+  console.log(ent);
+
+  if (ent.isIntersecting === false) {
+    document.body.classList.add("inview");
+  }
+
+  if (ent.isIntersecting === true) {
+    document.body.classList.remove("inview");
+  }
+});
+obs2.observe(galleryEl);
