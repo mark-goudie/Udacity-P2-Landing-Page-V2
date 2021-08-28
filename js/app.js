@@ -19,6 +19,7 @@
 
 const navBar = document.querySelector(".main-nav-items");
 const navElements = document.querySelectorAll("section");
+const sections = document.querySelectorAll("section");
 
 // Dynamic Navigation Menu //
 
@@ -93,40 +94,32 @@ const obs = new IntersectionObserver(
 );
 obs.observe(sectionHeroEl);
 
-// Active Viewport //
+// Checks if the div is in viewport //
 
-// Highlight Articles Heading (Scrolling Inview) //
+const isInViewport = function (elem) {
+  const bounding = elem.getBoundingClientRect();
+  return (
+    bounding.top >= 0 &&
+    bounding.left >= 0 &&
+    bounding.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    bounding.right <=
+      (window.innerWidth || document.documentElement.clientWidth)
+  );
+};
 
-const articlesEl = document.querySelector(".container-img-gallery");
+// Applies the CSS (transform) when in view //
 
-const obs1 = new IntersectionObserver(function (entries) {
-  const ent = entries[0];
-  console.log(ent);
+let containers = document.getElementsByClassName("cont");
 
-  if (ent.isIntersecting === false) {
-    document.body.classList.add("inview");
-  }
+const containerArray = [...containers];
 
-  if (ent.isIntersecting === true) {
-    document.body.classList.remove("inview");
-  }
+containerArray.forEach((container) => {
+  window.addEventListener("scroll", (e) => {
+    if (isInViewport(container)) {
+      container.classList.add("container-active");
+    } else {
+      container.classList.remove("container-active");
+    }
+  });
 });
-obs1.observe(articlesEl);
-
-// Highlight Gallery Heading (Scrolling Inview) //
-
-const galleryEl = document.querySelector(".section-hero");
-
-const obs2 = new IntersectionObserver(function (entries) {
-  const ent = entries[0];
-  console.log(ent);
-
-  if (ent.isIntersecting === false) {
-    document.body.classList.add("inview");
-  }
-
-  if (ent.isIntersecting === true) {
-    document.body.classList.remove("inview");
-  }
-});
-obs2.observe(galleryEl);
