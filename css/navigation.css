@@ -79,4 +79,5 @@
 .container-active {
   transform: scale(1.01);
   transition: all 0.3s;
+  border: solid red 5px;
 }
