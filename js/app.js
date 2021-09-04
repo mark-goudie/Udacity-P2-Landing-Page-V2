@@ -24,7 +24,7 @@ const sections = document.querySelectorAll("section");
 // Dynamic Navigation Menu //
 
 navElements.forEach(function (section) {
-  const navlistElement = `<li><a class='main-nav-link' data-link=${section.id} href="#${section.id}">${section.dataset.nav}</li>`;
+  const navlistElement = `<li><a class='main-nav-link ${section.id}' id="${section.id}-nav" data-link=${section.id} href="#${section.id}">${section.dataset.nav}</li>`;
   navBar.insertAdjacentHTML("beforeend", navlistElement);
 });
 
@@ -115,11 +115,16 @@ let containers = document.getElementsByClassName("cont");
 const containerArray = [...containers];
 
 containerArray.forEach((container) => {
+  const id = container.getAttribute("id");
+  const navItem = document.getElementById(`${id}-nav`);
+
   window.addEventListener("scroll", (e) => {
     if (isInViewport(container)) {
       container.classList.add("container-active");
+      navItem.classList.add("nav-active");
     } else {
       container.classList.remove("container-active");
+      navItem.classList.remove("nav-active");
     }
   });
 });

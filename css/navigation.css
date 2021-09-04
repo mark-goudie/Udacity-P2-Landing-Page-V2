@@ -71,13 +71,10 @@
   margin: 1rem 3rem;
 }
 
-.nav_active a {
-  color: red !important;
-  text-decoration-line: underline;
+.container-active {
+  border: solid red 5px;
 }
 
-.container-active {
-  transform: scale(1.01);
-  transition: all 0.3s;
+.nav-active {
   border: solid red 5px;
 }
