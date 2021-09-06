@@ -101,7 +101,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 30vh;
     transform: translateX(100%);
 
     display: flex;
@@ -154,7 +154,7 @@
 
     .grid--3-cols,
     .grid--4-cols,
-    .gallery {
+    .gallery-sec {
       grid-template-columns: repeat(2, 1fr);
     }
 
@@ -183,7 +183,7 @@
     .grid--2-cols,
     .grid--3-cols,
     .grid--4-cols,
-    .gallery {
+    .gallery-sec {
       grid-template-columns: 1fr;
     }
 
@@ -231,71 +231,72 @@
     .container {
       padding: 1.8rem;
     }
+    /* 
+Blog Post
 
-    /* Blog Post */
+.heading-primary {
+  font-size: 3.6rem;
+}
 
-    .heading-primary {
-      font-size: 3.6rem;
-    }
+.heading-secondary {
+  font-size: 2.4rem;
+}
 
-    .heading-secondary {
-      font-size: 2.4rem;
-    }
+.article {
+  padding: 1.8rem 0;
+}
 
-    .article {
-      padding: 1.8rem 0;
-    }
+.articles {
+  font-size: 5rem;
+  padding: 5rem 6rem;
+  background-color: #fff;
+}
 
-    .articles {
-      font-size: 5rem;
-      padding: 5rem 6rem;
-      background-color: #fff;
-    }
+.article-text-box {
+  padding: 4.8rem 4.8rem 2.4rem 4.8rem;
+}
 
-    .article-text-box {
-      padding: 4.8rem 4.8rem 2.4rem 4.8rem;
-    }
+.heading-h3 {
+  margin-bottom: 3.2rem;
+  font-size: 1.8rem;
+}
 
-    .heading-h3 {
-      margin-bottom: 3.2rem;
-      font-size: 1.8rem;
-    }
+.article-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 130rem;
+  display: grid;
+  margin: 0 auto;
+  padding: 0;
+  align-items: top;
+  justify-content: left;
+  gap: 4.8rem;
+}
 
-    .article-container {
-      display: grid;
-      grid-template-columns: 1fr;
-      max-width: 130rem;
-      display: grid;
-      margin: 0 auto;
-      padding: 0;
-      align-items: top;
-      justify-content: left;
-      gap: 4.8rem;
-    }
+.main-text {
+  width: 100%;
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
 
-    .main-text {
-      width: 100%;
-      font-size: 1.8rem;
-      line-height: 1.5;
-    }
+.side-blurb {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
 
-    .side-blurb {
-      font-size: 1.6rem;
-      line-height: 1.5;
-    }
+.container-img {
+  display: flex;
+  flex-direction: column;
+  padding: 0 4.8rem;
+}
 
-    .container-img {
-      display: flex;
-      flex-direction: column;
-      padding: 0 4.8rem;
-    }
+.container-img-gallery {
+  padding: 4.2rem 6rem;
+}
 
-    .container-img-gallery {
-      padding: 4.2rem 6rem;
-    }
-
-    .gallery {
-      row-gap: 4.8rem;
-    }
+.gallery {
+  row-gap: 4.8rem;
+}
+*/
   }
 }

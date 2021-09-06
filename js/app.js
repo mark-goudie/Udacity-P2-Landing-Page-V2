@@ -96,17 +96,28 @@ obs.observe(sectionHeroEl);
 
 // Checks if the div is in viewport //
 
-const isInViewport = function (elem) {
-  const bounding = elem.getBoundingClientRect();
+// const isInViewport = function (elem) {
+//   const bounding = elem.getBoundingClientRect();
+//   return (
+//     bounding.top >= 0 &&
+//     bounding.left >= 0 &&
+//     bounding.bottom <=
+//       (window.innerHeight || document.documentElement.clientHeight) &&
+//     bounding.right <=
+//       (window.innerWidth || document.documentElement.clientWidth)
+//   );
+// };
+
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
   return (
-    bounding.top >= 0 &&
-    bounding.left >= 0 &&
-    bounding.bottom <=
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
       (window.innerHeight || document.documentElement.clientHeight) &&
-    bounding.right <=
-      (window.innerWidth || document.documentElement.clientWidth)
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
-};
+}
 
 // Applies the CSS (transform) when in view //
 
