@@ -129,11 +129,11 @@ containerArray.forEach((container) => {
   const id = container.getAttribute("id");
   const navItem = document.getElementById(`${id}-nav`);
 
-  window.addEventListener("scroll", (e) => {
-    if (isInViewport(container)) {
+  window.addEventListener("scroll", () => {
+    if (isInViewport(container) && navItem !== null) {
       container.classList.add("container-active");
       navItem.classList.add("nav-active");
-    } else {
+    } else if (navItem !== null) {
       container.classList.remove("container-active");
       navItem.classList.remove("nav-active");
     }
